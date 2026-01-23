@@ -8,7 +8,6 @@
     "dev": "node index.js"
   },
   "dependencies": {
-    "crypto": "^1.0.1",
     "node-fetch": "^2.6.7"
   },
   "engines": {
@@ -18,4 +17,5 @@
   "author": "Mochizuki",
   "license": "MIT"
 }
+
 
