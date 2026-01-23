@@ -1,5 +1,5 @@
-import crypto from 'crypto';
-import fetch from 'node-fetch';
+const crypto = require('crypto');
+const fetch = require('node-fetch');
 
 // 環境変数設定（ESA-pagesで設定）
 const ADDRESS = process.env.ADDRESS || ''; // OpenListサーバーアドレス
@@ -120,7 +120,7 @@ async function handleRequest(request) {
 }
 
 // ESA-pagesエントリ関数
-export default async (request, context) => {
+module.exports = async (request, context) => {
     // OPTIONSプリフライトリクエスト処理
     if (request.method === 'OPTIONS') {
         return new Response(null, {
