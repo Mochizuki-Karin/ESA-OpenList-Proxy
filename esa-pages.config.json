@@ -1,0 +1,22 @@
+{
+  "name": "openlist-proxy-server",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "ADDRESS": "@openlist_address",
+    "TOKEN": "@openlist_token",
+    "WORKER_ADDRESS": "@worker_address",
+    "DISABLE_SIGN": "false"
+  }
+}
