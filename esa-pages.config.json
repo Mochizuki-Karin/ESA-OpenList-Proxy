@@ -1,20 +1,17 @@
 {
   "name": "openlist-proxy-server",
   "version": 2,
-  "builds": [
+  "functions": [
     {
-      "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [],
-        "bundle": false
-      }
+      "name": "proxy",
+      "file": "function.js",
+      "methods": ["GET", "OPTIONS"]
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.js"
+      "target": "proxy"
     }
   ],
   "env": {
