@@ -2,13 +2,14 @@
   "name": "openlist-proxy-server",
   "version": "1.0.0",
   "description": "OpenList proxy server for ESA-pages deployment",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^3.3.2"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -17,5 +18,3 @@
   "author": "Mochizuki",
   "license": "MIT"
 }
-
-
